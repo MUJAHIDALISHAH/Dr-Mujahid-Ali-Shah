@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mujahid Ali Shah</title>
+<meta name="description" content="Mujahid Ali Shah, PhD — zebrafish researcher at Aarhus University studying diet, microbiota, immune cells and the enteric nervous system in intestinal injury and regeneration.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* VOICE  everyday-academic: calm, precise, a little warm
+   IDEA   a figure plate from a zebrafish paper: a lateral larva with its gut lit up like a confocal overlay
+   PICTURE a large illustrated 6 dpf larva, intestine in epithelial blue, enteric neurons in GFP green, macrophages in magenta
+   COLOUR white ground (dark field at night), ink, zebrafish stripe indigo, GFP green, mCherry magenta
+   TYPE   Fraunces for titles, Public Sans for text
+   LAYOUT name across the top, larva full width beneath; sections as alternating bands; phone stacks name, larva, links */
+:root{color-scheme:light dark;
+--bg:light-dark(#ffffff,#0b0f14);
+--bg2:light-dark(#f3f5fb,#111821);
+--ink:light-dark(#141821,#e8ecf3);
+--mute:light-dark(#4a5263,#a9b2c2);
+--line:light-dark(#dde2ec,#243040);
+--ind:light-dark(#2b3f9e,#8ea2ff);
+--gfp:light-dark(#139a52,#3ee08a);
+--mag:light-dark(#c42a7e,#ff5fb3);
+--body:light-dark(#eef1f8,#18222e);
+--bodyedge:light-dark(#c9d0e2,#2f3d52);
+--gut:light-dark(#d6dcf3,#22304a)}
+:root[data-theme=light]{color-scheme:light}
+:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html{scroll-padding-top:72px;scroll-behavior:smooth}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16.5px/1.6 "Public Sans",system-ui,sans-serif;overflow-x:clip}
+a{color:var(--ind);text-underline-offset:3px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;letter-spacing:-.02em;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:clamp(40px,6vw,64px);font-weight:700}
+h2{font-size:clamp(30px,3.6vw,42px);font-weight:600;margin-bottom:18px}
+h3{font-size:22px;font-weight:600;margin-bottom:8px}
+p{margin:0 0 14px;max-width:68ch}
+.wrap{max-width:1240px;margin:0 auto}
+.band{padding-block:clamp(36px,5vw,72px);padding-left:max(5vw,16px);padding-right:max(5vw,16px)}
+.alt{background:var(--bg2)}
+nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 22px;padding:12px max(5vw,16px)}
+nav .me{font-family:Fraunces,Georgia,serif;font-weight:700;font-size:19px;color:var(--ink);text-decoration:none;margin-right:auto}
+nav a{font-size:15px;font-weight:500;text-decoration:none;color:var(--mute);padding:8px 0}
+nav a:hover,nav a:focus-visible{color:var(--ind)}
+.hero{padding-bottom:0}
+.lead{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:24px 48px;align-items:end}
+.role{font-size:18px;color:var(--mute);margin-top:14px}
+.role b{color:var(--ink);font-weight:600}
+.statement{font-size:18px;margin:0}
+.btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--ind);font-weight:600;font-size:15px;text-decoration:none}
+.btn.solid{background:var(--ind);color:var(--bg)}
+.btn:hover{background:color-mix(in srgb,var(--ind) 12%,transparent)}
+.btn.solid:hover{background:color-mix(in srgb,var(--ind) 85%,black)}
+.btn:focus-visible,nav a:focus-visible{outline:3px solid var(--gfp);outline-offset:3px}
+.fig{position:relative;height:clamp(240px,34vw,420px);margin-top:20px}
+.fig svg{position:absolute;inset:0;width:100%;height:100%}
+.fig text{font:500 14px "Public Sans",system-ui,sans-serif;paint-order:stroke;stroke:var(--bg);stroke-width:4px}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;font-size:14px;color:var(--mute);padding:10px 0 26px;border-bottom:1px solid var(--line)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:7px;vertical-align:-1px}
+.cols{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.card{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:24px}
+.alt .card{background:var(--bg)}
+.card p{color:var(--mute);font-size:16px}
+.card p:last-child{margin-bottom:0}
+.tag{display:inline-block;font-size:13px;font-weight:600;padding:3px 10px;border-radius:999px;margin-bottom:12px}
+.t-gfp{background:color-mix(in srgb,var(--gfp) 16%,transparent);color:var(--gfp)}
+.t-mag{background:color-mix(in srgb,var(--mag) 14%,transparent);color:var(--mag)}
+.t-ind{background:color-mix(in srgb,var(--ind) 14%,transparent);color:var(--ind)}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:28px 56px;align-items:start}
+.chain{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0 18px}
+.chain span{background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font-size:15px;font-weight:500}
+.chain em{font-style:normal;color:var(--mute)}
+ul.clean{list-style:none;padding:0;margin:0}
+ul.clean li{padding:14px 0;border-top:1px solid var(--line);display:grid;grid-template-columns:minmax(0,11em) minmax(0,1fr);gap:4px 20px}
+ul.clean li:last-child{border-bottom:1px solid var(--line)}
+ul.clean b{font-weight:600}
+ul.clean span{color:var(--mute)}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(15em,1fr));gap:16px}
+.person{border-left:3px solid var(--gfp);padding:4px 0 4px 16px}
+.person b{display:block;font-size:17px}
+.person span{color:var(--mute);font-size:15px}
+.timeline li span{white-space:nowrap}
+.contact{background:var(--ind);color:#fff}
+.contact h2{color:#fff}
+.contact p{color:#e3e8ff}
+.contact a{color:#fff}
+.contact .btn{border-color:#fff;color:#fff}
+.contact .btn.solid{background:#fff;color:#2b3f9e}
+.note{font-size:13px;color:var(--mute);margin-top:12px}
+footer{padding:22px max(5vw,16px);font-size:14px;color:var(--mute);border-top:1px solid var(--line)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px}
+@media(max-width:860px){.lead,.split{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:600px){.cols{grid-template-columns:minmax(0,1fr)}nav .me{width:100%}ul.clean li{grid-template-columns:minmax(0,1fr)}.fig{height:240px}}
+</style>
+</head>
+<body>
+<nav aria-label="Main">
+  <div class="wrap">
+    <a class="me" href="#top">Mujahid Ali Shah</a>
+    <a href="#research">Research</a>
+    <a href="#approach">Approach</a>
+    <a href="#people">Collaborators</a>
+    <a href="#career">Career</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="band hero" id="top">
+  <div class="wrap">
+    <div class="lead">
+      <div>
+        <h1>Mujahid Ali Shah, PhD</h1>
+        <p class="role"><b>Postdoctoral researcher</b>, Aarhus University, Denmark</p>
+      </div>
+      <div>
+        <p class="statement">I use transparent zebrafish larvae to watch the gut heal. My work asks how diet and the microbiota shape immune cells and the enteric nervous system when the intestinal lining is injured, and how it regenerates.</p>
+        <div class="btns">
+          <a class="btn solid" href="#research">See my research</a>
+          <a class="btn" href="#contact">Get in touch</a>
+        </div>
+      </div>
+    </div>
+    <div class="fig" role="img" aria-label="Illustration of a zebrafish larva seen from the side, with the intestine highlighted. Green dots along the gut mark enteric neurons and magenta cells mark macrophages.">
+      <svg id="larva"></svg>
+    </div>
+    <div class="legend" aria-hidden="true">
+      <span><i style="background:var(--ind)"></i>Intestinal epithelium</span>
+      <span><i style="background:var(--gfp)"></i>Enteric neurons</span>
+      <span><i style="background:var(--mag)"></i>Immune cells</span>
+    </div>
+  </div>
+</header>
+
+<section class="band" id="research">
+  <div class="wrap">
+    <h2>Research: how the gut repairs itself</h2>
+    <p>The intestine is lined by a single sheet of epithelium, wired by its own nervous system and patrolled by immune cells. When that lining is damaged, these systems must work together to restore it. Zebrafish larvae let me follow all three in a living, intact animal.</p>
+    <div class="cols" style="margin-top:26px">
+      <article class="card">
+        <span class="tag t-ind">Epithelial injury and regeneration</span>
+        <h3>Diet, microbes and repair</h3>
+        <p>How diet and gut microbiota influence immune cells and the enteric nervous system during intestinal epithelial injury and regeneration, combining larval and adult zebrafish with transgenic reporter lines.</p>
+      </article>
+      <article class="card">
+        <span class="tag t-gfp">Enteric nervous system</span>
+        <h3>Enteric neuron ablation and regeneration</h3>
+        <p>A chemogenetic nitroreductase / metronidazole (NTR/MTZ) model to remove enteric neurons in larvae and follow how they come back. Next step: single-cell RNA sequencing of the regenerative process.</p>
+      </article>
+      <article class="card">
+        <span class="tag t-mag">Inflammation</span>
+        <h3>Dietary fat and enterocolitis</h3>
+        <p>A fat-rich egg-yolk diet combined with DSS-induced enterocolitis, tracing how dietary fat reshapes the microbiota and its metabolites, and how that changes inflammation and recovery.</p>
+      </article>
+      <article class="card">
+        <span class="tag t-gfp">Neuroimmune communication</span>
+        <h3>Nerves and immune cells under a high-fat diet</h3>
+        <p>How dietary factors and inflammation affect neuronal and immune responses during repair: neuronal integrity, calcium imaging of enteric neurons, immune-cell dynamics and transcriptomics.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="approach">
+  <div class="wrap split">
+    <div>
+      <h2>Approach</h2>
+      <p>One question runs through the projects: what links what an animal eats to how well its gut recovers?</p>
+      <div class="chain" aria-label="Research chain">
+        <span>Diet</span><em>→</em><span>Injury or inflammation</span><em>→</em><span>Microbiota</span><em>→</em><span>Metabolites</span><em>→</em><span>Immune and neuronal response</span><em>→</em><span>Recovery</span>
+      </div>
+      <p>The work spans intestinal inflammation, microbiology, immunology and neuroscience.</p>
+    </div>
+    <ul class="clean">
+      <li><b>Model</b><span>Zebrafish (<i>Danio rerio</i>) larvae and adults, transgenic and reporter lines, in-house husbandry</span></li>
+      <li><b>Imaging</b><span>Live light-sheet microscopy and Leica Thunder widefield imaging; calcium imaging of enteric neurons</span></li>
+      <li><b>Injury models</b><span>Chemogenetic NTR/MTZ cell ablation; DSS-induced enterocolitis</span></li>
+      <li><b>Diet</b><span>Fat-rich egg-yolk feeding and dietary lipid manipulation</span></li>
+      <li><b>Molecular</b><span>Molecular biology, transcriptomics and single-cell RNA sequencing</span></li>
+      <li><b>Physiology</b><span>Behavioural assays in larvae</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band" id="people">
+  <div class="wrap">
+    <h2>Collaborators</h2>
+    <p>I work within the Aarhus research environment, including the Department of Molecular Biology and Genetics (MBG), Nordic EMBL, DANDRITE and AIAS, and with colleagues across Scandinavia.</p>
+    <div class="people" style="margin-top:22px">
+      <div class="person"><b>Gilles Vanwalleghem</b><span>Aarhus University, Denmark</span></div>
+      <div class="person"><b>Rodrigo Morales Castro</b><span>Karolinska Institutet, Sweden</span></div>
+      <div class="person"><b>Iker Aramburu</b><span>Umeå University, Sweden</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="band alt" id="career">
+  <div class="wrap split">
+    <div>
+      <h2>Career and talks</h2>
+      <p>Publications are listed on Google Scholar.</p>
+      <div class="btns">
+        <a class="btn" href="https://scholar.google.com/scholar?q=%22Mujahid+Ali+Shah%22+zebrafish">Publications on Google Scholar</a>
+      </div>
+    </div>
+    <ul class="clean timeline">
+      <li><b>Now</b><span>Postdoctoral researcher, Aarhus University, Denmark</span></li>
+      <li><b>Previously</b><span>Ganz Lab, Michigan State University, USA</span></li>
+      <li><b>Talk</b><span>ZDMS early-career webinar: enteric neuron ablation and regeneration in zebrafish larvae</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="band contact" id="contact">
+  <div class="wrap split">
+    <div>
+      <h2>Get in touch</h2>
+      <p>I am happy to talk about collaborations, zebrafish gut models, or opportunities to join the work.</p>
+    </div>
+    <div>
+      <p><b>Mujahid Ali Shah, PhD</b><br>Aarhus University<br>Aarhus, Denmark</p>
+      <div class="btns">
+        <a class="btn solid" href="https://scholar.google.com/scholar?q=%22Mujahid+Ali+Shah%22+zebrafish">Google Scholar</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Mujahid Ali Shah</span>
+    <a href="#top">Back to top</a>
+  </div>
+</footer>
+
+<script>
+{
+const s=document.getElementById('larva');
+let seed=7;const rnd=()=>(seed=seed*16807%2147483647)/2147483647;
+const draw=()=>{
+  const W=s.clientWidth,H=s.clientHeight;if(!W||!H)return;
+  const narrow=W<560;
+  // fish occupies a box; keep 2.6:1 proportion, centred
+  const fw=Math.min(W*0.98,H*2.7),fh=fw/2.7,ox=(W-fw)/2,oy=(H-fh)/2+(narrow?0:8);
+  const X=x=>ox+x*fw,Y=y=>oy+y*fh;
+  const P=(pts)=>pts.map((p,i)=>(i?'L':'M')+X(p[0]).toFixed(1)+','+Y(p[1]).toFixed(1)).join('');
+  // body outline: head left, tail right
+  const body=`M${X(.02)},${Y(.5)}C${X(.02)},${Y(.22)} ${X(.12)},${Y(.14)} ${X(.22)},${Y(.2)}C${X(.4)},${Y(.27)} ${X(.62)},${Y(.36)} ${X(.86)},${Y(.44)}L${X(.99)},${Y(.48)}L${X(.86)},${Y(.56)}C${X(.62)},${Y(.62)} ${X(.46)},${Y(.72)} ${X(.3)},${Y(.8)}C${X(.18)},${Y(.86)} ${X(.06)},${Y(.8)} ${X(.02)},${Y(.5)}Z`;
+  // fin fold
+  const fin=`M${X(.34)},${Y(.27)}C${X(.6)},${Y(.2)} ${X(.85)},${Y(.3)} ${X(.995)},${Y(.36)}L${X(.995)},${Y(.62)}C${X(.85)},${Y(.7)} ${X(.62)},${Y(.82)} ${X(.46)},${Y(.79)}`;
+  // gut centre line
+  const g=t=>{const x=.17+t*.47;const y=.66-t*.1+Math.sin(t*3.1)*.015;return [x,y]};
+  let gutTop='',gutBot='';const N=40;
+  for(let i=0;i<=N;i++){const t=i/N,[x,y]=g(t),r=(.075-.045*t);gutTop+=(i?'L':'M')+X(x)+','+Y(y-r);}
+  for(let i=N;i>=0;i--){const t=i/N,[x,y]=g(t),r=(.075-.045*t);gutBot+='L'+X(x)+','+Y(y+r);}
+  const gut=gutTop+gutBot+'Z';
+  let lumen='';for(let i=0;i<=N;i++){const t=i/N,[x,y]=g(t);lumen+=(i?'L':'M')+X(x)+','+Y(y);}
+  // melanophore stripes
+  seed=7;let mel='';
+  for(let i=0;i<26;i++){const t=i/25;const x=.25+t*.62;const yd=.27+t*.17,yv=.75-t*.19;
+    mel+=`<ellipse cx="${X(x)}" cy="${Y(yd+.02)}" rx="${fw*.009}" ry="${fh*.012}" fill="var(--ink)" opacity=".55"/>`;
+    if(x>.62)mel+=`<ellipse cx="${X(x)}" cy="${Y(yv-.02)}" rx="${fw*.008}" ry="${fh*.011}" fill="var(--ink)" opacity=".45"/>`;}
+  // neurons along gut wall
+  seed=11;let neu='';
+  for(let i=0;i<34;i++){const t=.03+rnd()*.94,[x,y]=g(t),r=(.075-.045*t),side=rnd()<.5?-1:1;
+    const cx=X(x+(rnd()-.5)*.01),cy=Y(y+side*r*(.55+rnd()*.35));
+    neu+=`<circle cx="${cx}" cy="${cy}" r="${Math.max(2.2,fw*.0045)}" fill="var(--gfp)"/>`;}
+  // neurite network: connect sorted neurons faintly
+  // immune cells (macrophage-like blobs)
+  seed=23;let imm='';
+  for(let i=0;i<9;i++){const t=.05+rnd()*.9,[x,y]=g(t),r=(.075-.045*t);
+    const cx=X(x+(rnd()-.5)*.03),cy=Y(y+(rnd()<.5?-1:1)*(r+.02+rnd()*.03)),a=fw*.009;
+    imm+=`<path d="M${cx-a},${cy}q${a*.4},${-a*1.3} ${a*1.3},${-a*.6}q${a*1.1},${a*.2} ${a*.6},${a*1.1}q${-a*.6},${a*.9} ${-a*1.4},${a*.4}z" fill="var(--mag)" opacity=".9"/>`;}
+  // labels with leader lines
+  const lab=(px,py,lx,ly,txt,anchor)=>`<line x1="${px}" y1="${py}" x2="${lx}" y2="${ly}" stroke="var(--mute)" stroke-width="1"/><text x="${lx+(anchor==='end'?-4:4)}" y="${ly+(ly<py?-4:14)}" text-anchor="${anchor}" fill="var(--ink)">${txt}</text>`;
+  const [ix,iy]=g(.55),[nx,ny]=g(.3),[mx,my]=g(.8);
+  let labels='';
+  if(!narrow){
+    labels+=lab(X(ix),Y(iy+.05),X(ix)+fw*.04,Y(.95),'Intestine','start');
+    labels+=lab(X(.065),Y(.42),X(.04),Y(.06),'Eye','start');
+    labels+=lab(X(.3),Y(.52),X(.3),Y(.09),'Swim bladder','start');
+  }
+  s.setAttribute('viewBox',`0 0 ${W} ${H}`);
+  s.innerHTML=`
+  <defs><linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="var(--body)"/><stop offset="1" stop-color="var(--bodyedge)"/></linearGradient></defs>
+  <ellipse cx="${X(.5)}" cy="${Y(.96)}" rx="${fw*.42}" ry="${fh*.03}" fill="var(--line)" opacity=".7"/>
+  <path d="${fin}" fill="var(--body)" stroke="var(--bodyedge)" stroke-width="1.2" opacity=".75"/>
+  <path d="${body}" fill="url(#bg1)" stroke="var(--bodyedge)" stroke-width="1.5"/>
+  <path d="${P([[.2,.5],[.97,.48]])}" stroke="var(--bodyedge)" stroke-width="${fh*.03}" stroke-linecap="round" opacity=".7"/>
+  <ellipse cx="${X(.3)}" cy="${Y(.46)}" rx="${fw*.045}" ry="${fh*.07}" fill="var(--bg)" stroke="var(--bodyedge)" stroke-width="1.5"/>
+  <ellipse cx="${X(.29)}" cy="${Y(.44)}" rx="${fw*.018}" ry="${fh*.025}" fill="#fff" opacity=".7"/>
+  <path d="${gut}" fill="var(--gut)" stroke="var(--ind)" stroke-width="${Math.max(2,fw*.004)}"/>
+  <path d="${lumen}" fill="none" stroke="var(--ind)" stroke-width="1" stroke-dasharray="3 4" opacity=".6"/>
+  ${mel}${neu}${imm}
+  <circle cx="${X(.075)}" cy="${Y(.45)}" r="${fh*.085}" fill="var(--ink)"/>
+  <circle cx="${X(.062)}" cy="${Y(.42)}" r="${fh*.022}" fill="#fff" opacity=".85"/>
+  ${labels}`;
+};
+const ro=new ResizeObserver(draw);ro.observe(s);
+}
+</script>
+</body>
+</html>
